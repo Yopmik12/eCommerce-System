@@ -2,7 +2,7 @@
 
 
 *************************
-eCommerce System
+eCommerce Project System for binmax corp.
 *************************
 
-eCommerce Project System for binmax corp.
+

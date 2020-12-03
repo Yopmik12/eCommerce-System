@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    
     <v-navigation-drawer class="hidden-md-only" v-model="sidebar" app>
         <v-list>
             <v-list-item 
@@ -71,8 +70,8 @@
     MODAL LOGIN
   -------------->
 
- <div class="text-center">
-    <v-bottom-sheet v-model="loginDialog" width="800">
+
+    <v-bottom-sheet v-model="loginDialog" width="800"  class="text-center">
       <v-sheet class="text-center" height="300px">
         
         <div class="my-3" style="padding-left: 30%;padding-right: 30%;padding-top:1%">
@@ -94,12 +93,7 @@
         </div>
       </v-sheet>
     </v-bottom-sheet>
-  </div>
-
-
-
-  <div class="text-center">
-    <v-bottom-sheet inset v-model="signupDialog" width="800">
+    <v-bottom-sheet inset v-model="signupDialog" width="800" class="text-center">
       <v-sheet class="text-center" height="690px">
         <div class="my-3" style="padding-left: 30%;padding-right: 30%;padding-top:1%">
           <h2 style="color:#007580;padding-bottom:17%">Sign Up</h2>
@@ -146,12 +140,9 @@
         </div>
       </v-sheet>
     </v-bottom-sheet>
-  </div>
-
-
-  <div class="text-center ma-2">
     <v-snackbar
       v-model="alert"
+      class="text-center ma-2"
     ><v-icon color="red">mdi-alert-circle</v-icon>
        {{alertMessage}}
 
@@ -166,12 +157,13 @@
         </v-btn>
       </template>
     </v-snackbar>
-  </div>
   </v-app>
 </template>
 
 
 <script>
+
+
 export default {
   data(){
     return{
@@ -256,7 +248,8 @@ export default {
         this.alertMessage = "Password dont match!"
       }
     }
-  }
+  },
+
 }
 </script>
 
@@ -269,4 +262,10 @@ export default {
 .v-toolbar__title{
   font-family: "Gill Sans", sans-serif;
 }
+
+@font-face {
+        font-family: "RickonRegular";
+        src: local("RickonRegular"),
+        url(./fonts/rickon-font/RickonRegular.ttf) format("truetype");
+  }
 </style>

@@ -12,6 +12,22 @@
                 </v-list-item-action>
                 <v-list-item-content>{{ item.title }}</v-list-item-content>
             </v-list-item>
+            <!-- ABOUT -->
+             <a href="#secBuy" v-smooth-scroll style="text-decoration:none">
+            <v-list-item style="cursor: pointer">
+               <v-list-item-action>
+                  <v-icon>
+                    mdi-comment-text-outline
+                  </v-icon>
+                </v-list-item-action>
+                
+                <v-list-item-content>
+                    About
+                </v-list-item-content>
+                
+            </v-list-item>
+            </a>
+            <!-- LOGIN -->
             <v-list-item style="cursor: pointer">
                 <v-list-item-action>
                   <v-icon>
@@ -42,12 +58,10 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
-          <v-btn
-          
+          <v-btn          
           v-for="item in menuItems"
           :key="item.title"
-          :to="item.path"
-          
+          :to="item.path"          
           >
           <v-icon left dark>{{ item.icon }}</v-icon>
           {{ item.title }}
@@ -55,8 +69,12 @@
       </v-toolbar-items>
       <v-toolbar-items class="hidden-xs-only">
         <v-btn
+        ><a href="#secBuy" v-smooth-scroll style="text-decoration:none;color:black"><v-icon left dark>mdi-comment-text-outline</v-icon> About</a></v-btn>
+      </v-toolbar-items>
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn
           @click="modal()"
-        ><v-icon>mdi-login</v-icon> LOGIN</v-btn>
+        ><v-icon left dark>mdi-login</v-icon> LOGIN</v-btn>
       </v-toolbar-items>
     </v-app-bar>
 
@@ -99,7 +117,6 @@
           <h2 style="color:#007580;padding-bottom:17%">Sign Up</h2>
           <v-text-field
             v-model="fillupForm.firstName"
-            ref="txt"
             label="First Name"
             clearable
           ></v-text-field>
@@ -181,16 +198,13 @@ export default {
           },
           {
               title: 'Product',
-              path: '/product',
-              icon: 'mdi-gift'
-          },
-           {
-              title: 'About',
               path: '/about',
-              icon: 'mdi-comment-text-outline'
+              icon: 'mdi-gift'
           },
       ]
     }
+  },
+  mounted(){
   },
   watch:{
       signupDialog(val){

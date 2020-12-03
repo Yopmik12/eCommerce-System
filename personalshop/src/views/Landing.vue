@@ -24,8 +24,8 @@
                 <v-parallax src="../assets/parallax.jpg" height="500" style="position:relative;margin: -13px;">
                     <span class="headerFont">Clothes for your daily needs</span><br>
                     <span class="headerSub" style="bottom: 10px;">Join now and be the first to know our new offers and promotions!</span> 
-                    <a  href="#sec-3" v-smooth-scroll><v-btn fab class="scrollButton">
-                        <font-awesome-icon class="ml-n0 mb-n1" style="font-size: 20px; color:#333;" icon="arrow-down"/>
+                    <a  href="#sec-3" v-smooth-scroll class="text-center"><v-btn fab class="scrollButton">
+                        <font-awesome-icon  style="font-size: 20px; color:#333;" icon="arrow-down"/>
                     </v-btn></a>
                     <a href="#secBuy" v-smooth-scroll class="text-center learnMore">Learn More <font-awesome-icon icon="angle-right" style="font-size: 20px;padding-top:3px;"></font-awesome-icon></a>
                 </v-parallax>
@@ -89,6 +89,15 @@
                         Learn More
                     </v-btn>
             </v-col>
+         </v-row>
+         <v-row>
+             
+             <v-col style="background-color:red">
+                 <div class="text-center">
+                 Shop anywhere
+             </div>
+                 TEST
+             </v-col>
          </v-row>
          <v-row>
              <v-col>
@@ -396,10 +405,10 @@ export default {
         padding: 20px;
         font-size: 16px;
         margin: 4px 2px;
+        margin-left: -28px;
         width: 56px;
         height: 50px;
         border-radius: 50%;
-        margin-left: 50%;
         bottom: 0;
         position: absolute;
         text-decoration: none;
